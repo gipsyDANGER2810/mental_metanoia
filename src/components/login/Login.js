@@ -6,6 +6,10 @@ function Login() {
 
 
     const [showRegisterForm, setShowRegisterForm] = useState(false);
+
+
+
+
     const handleSignUpClick = (event) => {
         event.preventDefault();
         setShowRegisterForm(true);
@@ -17,6 +21,7 @@ function Login() {
     }
 
     return (
+        <div className='container-fluid'>
         <div className='login_form'>
             {showRegisterForm}
             <div className="login_form_left">
@@ -52,16 +57,17 @@ function Login() {
                 </div>
                 <div class="mb-3">
                     <label htmlFor="exampleFormControlInput1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                    <input type='password' class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                    
                 </div>
 
 
                 {!showRegisterForm &&
                     <>
-                        <button type="submit" class="btn btn-primary" >Login</button>
+                        <button type="submit" class="btn btn-primary" >Login</button><a href='/'>Forgot Password</a>
                         <div className='forget_password'>
                             <label><input type="checkbox" />Remember Me</label>
-                            <a href='/'>Forgot Password</a>
+                            
                         </div>
                         <div className="register">
                             <p>Dont have an Account? <a href='/' onClick={handleSignUpClick}> Sign Up</a></p>
@@ -72,7 +78,7 @@ function Login() {
                 {showRegisterForm &&
                     <>
                         <button type="submit" class="btn btn-primary" >Sign Up</button>
-                        <button type="submit" class="btn btn-primary" onClick={LoginClick}>Login instead?</button>
+                        <a href='/' onClick={LoginClick}>Login instead?</a>
                     </>
                 }
 
@@ -80,6 +86,8 @@ function Login() {
             </div>
 
         </div>
+        </div>
+        
     )
 
 
