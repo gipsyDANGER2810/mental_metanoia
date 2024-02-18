@@ -11,10 +11,10 @@ function App() {
 <Navbar></Navbar>
       <Login></Login>
 
-{/* <div className="footer">
+<div className="footer">
       <Footer></Footer>
 
-</div> */}
+</div>
     </div>
   );
 }
