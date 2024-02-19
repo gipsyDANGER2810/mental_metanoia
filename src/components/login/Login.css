@@ -1,15 +1,25 @@
 .main-body {
-  background-color: var(--primary-dark);
+  /* background-color: var(--primary-dark); */
+  background-image: url("../../photos/therapist-talk.jpg");
+  background-size: cover;
+  height: 41rem;
+  text-align: center;
+  position: relative;
+  top: 0;
 }
 .login_form {
-  /* border: 5px solid #000000; */
+  position: relative;
+  top: 50%;
+  background-color: rgb(from var(--secondary-light) r g b / 0.45);
+  backdrop-filter: blur(5px);
+  transform: translateY(-50%);
   justify-content: center;
   display: flex;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 100px;
+  /* padding-top: 100px; */
 }
 
 .login_form_left {
@@ -17,12 +27,49 @@
 }
 
 .login_form_left > img {
-  max-width: 275px;
-  margin-top: 130px;
+  max-width: 300px;
+  /* margin-top: 130px; */
 }
 
 .login_form_right {
   flex: 1;
-  padding-left: 20px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
   /* background-color: aliceblue; */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+/* Submit button
+.login-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+} */
+
+/* Checkbox and link styling */
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form .remember-me {
+  float: left;
+}
+
+.login-form .forgot-password {
+  float: right;
+  color: #aaa;
 }

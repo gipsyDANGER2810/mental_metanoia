@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../photos/logo2.png";
+import loginGif from "../../photos/login.gif";
 
 function Login() {
   const [showRegisterForm, setShowRegisterForm] = useState(false);
@@ -20,7 +21,7 @@ function Login() {
       <div className="login_form">
         {showRegisterForm}
         <div className="login_form_left">
-          <img src={logo} alt=""></img>
+          <img src={loginGif} alt=""></img>
         </div>
         <div className="login_form_right">
           {showRegisterForm && (
