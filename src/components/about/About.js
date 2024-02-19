@@ -1,12 +1,7 @@
-import React from 'react'
-import Navbar from '../navbar/Navbar'
+import React from "react";
 
 function About() {
-  return (
-    <div>
-      <Navbar></Navbar>
-    </div>
-  )
+  return <></>;
 }
 
-export default About
+export default About;

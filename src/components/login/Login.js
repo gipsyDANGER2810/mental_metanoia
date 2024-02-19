@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import './Login.css'
-import logo from '../../photos/logo2.png';
+import React, { useState } from "react";
+import "./Login.css";
+import logo from "../../photos/logo2.png";
 
 function Login() {
 
@@ -139,5 +139,4 @@ function Login() {
 
 }
 
-
-export default Login
+export default Login;
