@@ -1,12 +1,11 @@
-import React from 'react'
-import './Footer.css'
-import logo from '../../photos/logo2.png';
-import '@fortawesome/fontawesome-free/css/all.css';
-
+import React from "react";
+import "./Footer.css";
+import logo from "../../photos/logo2.png";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 function Footer() {
   return (
-    <div className='footer'>
+    <div className="footer">
       <div className="footer_logo">
         <img src={logo} alt="Logo" />
       </div>
@@ -67,4 +66,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;
