@@ -10,6 +10,11 @@ function Navbar() {
     navigate(path);
   };
 
+  const handleAppointment = () =>{
+    let path = `appointment`;
+    navigate(path)
+  }
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -85,14 +90,14 @@ function Navbar() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link" to="/contactUs">
                   Contact us
                 </Link>
               </li>
             </ul>
             <ul className="navbar-nav navBtns flex-row-lg ms-auto">
               <li className="nav-item">
-                <button type="button" className="btn btn-primary">
+                <button type="button" className="btn btn-primary" onClick={handleAppointment}>
                   Book Online Session
                 </button>
               </li>
