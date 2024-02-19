@@ -1,22 +1,29 @@
 import React from "react";
 import logo from "../../photos/logo2.png";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import "./Navbar.css";
 function Navbar() {
+  const navigate = useNavigate();
+
+  const loginRoute = () => {
+    let path = `login`;
+    navigate(path);
+  };
+
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a class="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img
               className="logo"
               src={logo}
               alt="LOGO"
-              style={{ maxWidth: "100px", maxHeight: "50px" }}
+              style={{ maxWidth: "150px", maxHeight: "80px" }}
             ></img>
-          </a>
+          </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -24,66 +31,81 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              {/* <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li> */}
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
-                </a>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              className="navbar-nav navLinks mb-2 mb-lg-0 d-flex justify-content-center mx-auto ps-4-lg"
+              id="primary"
+            >
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
+                  Our Services
+                </Link>
+                <ul className="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Action
-                    </a>
+                    <Link className="dropdown-item" to="/">
+                      Self
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Another action
-                    </a>
+                    <Link className="dropdown-item" to="/">
+                      Couples Therapy
+                    </Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <Link className="dropdown-item" to="/">
+                      Teen
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Something else here
-                    </a>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/">
+                      View all
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">
-                  Disabled
-                </a>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  Contact us
+                </Link>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <ul className="navbar-nav navBtns flex-row-lg ms-auto">
+              <li className="nav-item">
+                <button type="button" className="btn btn-primary">
+                  Book Online Session
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  type="button"
+                  className="login-btn btn btn-secondary"
+                  onClick={loginRoute}
+                >
+                  Login
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>

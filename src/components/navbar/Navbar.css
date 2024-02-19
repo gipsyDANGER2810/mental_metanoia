@@ -1,3 +1,87 @@
-.buttons{
-    justify-content: right;
+.navBtns > li {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.navLinks > li {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+/** HOVER EFFECT **/
+#primary {
+  /* position: absolute; */
+  /* top: 0; */
+  text-align: center;
+  height: 100%;
+}
+#primary li {
+  /* margin: 0 20px; */
+  /* position: relative; */
+}
+#primary li .nav-link {
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  line-height: 1;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-light),
+    var(--primary-light) 50%,
+    var(--primary-color) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+#primary li .nav-link:before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: 5px;
+  left: 0;
+  bottom: -3px;
+  z-index: 0;
+  position: absolute;
+  background: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+#primary li .nav-link:hover {
+  background-position: 0%;
+}
+#primary li .nav-link:hover:before {
+  width: 100%;
+}
+
+/** BUTTONS **/
+
+.btn-secondary {
+  background: var(--secondary-dark);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark-2);
+}
+
+.btn-primary {
+  color: var(--secondary-light);
+  background: linear-gradient(
+    101deg,
+    var(--primary-light) 0%,
+    var(--primary-color) 35%,
+    var(--primary-alt) 100%
+  );
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark-2);
 }
