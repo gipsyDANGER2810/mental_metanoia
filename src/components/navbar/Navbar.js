@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../photos/logo2.png";
+import logo from "../../photos/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
               className="logo"
               src={logo}
               alt="LOGO"
-              style={{ maxWidth: "150px", maxHeight: "80px" }}
+              // style={{ maxWidth: "150px", maxHeight: "80px" }}
             ></img>
           </Link>
           <button

@@ -26,7 +26,12 @@ function Login() {
         <div className="login_form_right">
           {showRegisterForm && (
             <>
-              <div class="mb-3">
+              <div className="input-group col-lg-6 mb-3">
+                <div className="input-group-prepend">
+                  <span class="input-group-text bg-white px-4 border-md border-right-0">
+                    <i class="fa fa-user text-muted"></i>
+                  </span>
+                </div>
                 <label htmlFor="exampleFormControlInput1" class="form-label">
                   First Name
                 </label>
@@ -67,7 +72,19 @@ function Login() {
               </div>
             </>
           )}
-          <div class="mb-3">
+          <div className="input-group col-lg-6 mb-3">
+            <div className="input-group-prepend">
+              <span className="input-group-text bg-white px-4 border-md border-right-0">
+                <i className="fa fa-envelope text-muted"></i>
+              </span>
+            </div>
+            <input
+              id="email"
+              type="text"
+              name="email"
+              placeholder="Email Address"
+              className="form-control bg-white border-left-0 border-md ms-0"
+            ></input>
             <label htmlFor="exampleFormControlInput1" class="form-label">
               Email address
             </label>
